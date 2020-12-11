@@ -1,23 +1,36 @@
-javascript: (function () {
-	var start = new Date();
-	var pad = function (i) {
-		var s = '0' + Math.floor(i);
-		return s.substr(s.length - 2);
-	};
-	var newTimerStr = function () {
-		var currentTime = new Date(),
-			hours = currentTime.getHours(),
-			minutes = currentTime.getMinutes();
-		seconds = currentTime.getSeconds();
-		if (minutes < 10) {
-			minutes = '0' + minutes;
-		}
-		if (seconds < 10) {
-			seconds = '0' + seconds;
-		}
-		return `[${hours} : ${minutes} : ${seconds}]`;
-	};
-	setInterval(function () {
-		document.title = newTimerStr();
-	}, 1000);
-})();
+var rev = "fwd";
+function titlebar(val){
+    var msg  = "GooseCorp";
+    var res = " ";
+    var speed = 250;
+    var pos = val;
+    msg = "   🍇"+msg+"💜";
+    var le = msg.length;
+    if(rev == "fwd"){
+        if(pos < le){
+            pos = pos+1;
+            scroll = msg.substr(0,pos);
+            document.title = scroll;
+            timer = window.setTimeout("titlebar("+pos+")",speed);
+        }
+        else {
+            rev = "bwd";
+            timer = window.setTimeout("titlebar("+pos+")",speed);
+        }
+    }
+    else {
+        if(pos > 0) {
+            pos = pos-1;
+            var ale = le-pos;
+            scrol = msg.substr(ale,le);
+            document.title = scrol;
+            timer = window.setTimeout("titlebar("+pos+")",speed);
+        }
+        else {
+            rev = "fwd";
+            timer = window.setTimeout("titlebar("+pos+")",speed);
+        }
+    }
+}
+titlebar(0);
+document.addEventListener('contextmenu', event => event.preventDefault());
