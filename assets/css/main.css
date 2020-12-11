@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
+body {
+	font-family: "Manrope", sans-serif;
+	background-color:#000;
+	color: red;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.6s;
+	color: #008000;
+}
+
+a:hover {
+	color: #FF0000;
+}
+
+#myVideo, body {  
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#welcome {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	font-size: 20px;
+	transition: 0.6s;
+}
+
+#hidden {
+	transition: 0.6s;
+}
+
+.clock {
+	position: fixed;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #f1f1f1;
+	width: 100%;
+	padding: 20px;
+}
+
+.content {
+	font-size: 17px;
+	position: fixed;
+	color: #f1f1f1;
+	opacity: 0.7;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
