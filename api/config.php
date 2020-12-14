@@ -4,7 +4,7 @@ $KEYS = ['asdf', '1234'];
 
 //you should probably restrict access to this
 //api keys are hashed using a password hash but someone could use this to see all files
-#$DB_NAME = 'db.sqlite';
+$DB_NAME = 'db.sqlite';
 
 //length of randomly generated files
 $FILE_NAME_LENGTH = 5;
